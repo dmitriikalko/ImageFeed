@@ -11,7 +11,6 @@ class ImagesListViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     
-    
     //моковые картинки
     //создаем масссив чисел и возвращаем массив строк
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
@@ -23,7 +22,7 @@ class ImagesListViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
     
-    
+    //вычисляем дату
     private lazy var dateFormater: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
