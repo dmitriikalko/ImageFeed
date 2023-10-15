@@ -9,18 +9,16 @@ import UIKit
 
 class ImagesListViewController: UIViewController {
 
+    // MARK: - Public properties
+    
+    // MARK: - IBOutlet
     @IBOutlet private var tableView: UITableView!
     
+    
+    // MARK: - Private properties
     //моковые картинки
     //создаем масссив чисел и возвращаем массив строк
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
-    }
     
     //вычисляем дату
     private lazy var dateFormater: DateFormatter = {
@@ -29,10 +27,23 @@ class ImagesListViewController: UIViewController {
         formatter.timeStyle = .none
         return formatter
     }()
+    
+    // MARK: - viewDidLoad
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
+    }
+    
+
 
     //func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {}
 
 }
+
+// MARK: -Extensions
 
 extension ImagesListViewController: UITableViewDelegate {
     
