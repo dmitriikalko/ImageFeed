@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-em-CKa">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EaW-em-CKa">
+                                <rect key="frame" x="72" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" name="YP Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" id="xCR-l2-T0h" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="179" id="xCR-l2-T0h" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="179"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xCR-l2-T0h" id="Itc-8c-qxS">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="132"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHG-AA-m7e" userLabel="Cell Image">
-                                                    <rect key="frame" x="20" y="0.0" width="373" height="132"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHG-AA-m7e" userLabel="Cell Image">
+                                                    <rect key="frame" x="16" y="4" width="361" height="171"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -38,26 +38,29 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kB-9w-JfI" userLabel="Like Button">
-                                                    <rect key="frame" x="321" y="11" width="44" height="44"/>
+                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="No Active Like"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.03.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEr-tr-EQc" userLabel="Date Label">
-                                                    <rect key="frame" x="28" y="92" width="88" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="24.03.2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nEr-tr-EQc" userLabel="Date Label">
+                                                    <rect key="frame" x="20" y="152" width="361" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" name="YP White"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="0kB-9w-JfI" secondAttribute="trailing" constant="8" id="09f-Ft-EnI" userLabel="trailingMargin = Like Button.trailing"/>
-                                                <constraint firstAttribute="trailing" secondItem="pHG-AA-m7e" secondAttribute="trailing" id="8je-DE-ia1" userLabel="trailingMargin = Cell Image.trailing"/>
-                                                <constraint firstItem="0kB-9w-JfI" firstAttribute="top" secondItem="Itc-8c-qxS" secondAttribute="topMargin" id="HGx-Cx-gVm" userLabel="Like Button.top = CellImage.top"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nEr-tr-EQc" secondAttribute="bottom" constant="8" id="QIf-8j-hJK" userLabel="CellImageBottom = Date Label.bottom + 8"/>
-                                                <constraint firstItem="pHG-AA-m7e" firstAttribute="leading" secondItem="Itc-8c-qxS" secondAttribute="leading" constant="20" symbolic="YES" id="UMR-Os-06w" userLabel="Cell Image.leading = leadingMarging"/>
-                                                <constraint firstItem="pHG-AA-m7e" firstAttribute="top" secondItem="Itc-8c-qxS" secondAttribute="top" id="XgM-PB-Kp6" userLabel="Cell Image.top = topMargin"/>
-                                                <constraint firstAttribute="bottom" secondItem="pHG-AA-m7e" secondAttribute="bottom" id="aSI-kQ-1zt" userLabel="bottomMargin = Cell Image.bottom"/>
-                                                <constraint firstItem="nEr-tr-EQc" firstAttribute="leading" secondItem="Itc-8c-qxS" secondAttribute="leadingMargin" constant="8" id="w1Q-da-OTF" userLabel="Date Label.leading = CellImageLeading + 8"/>
+                                                <constraint firstItem="0kB-9w-JfI" firstAttribute="trailing" secondItem="pHG-AA-m7e" secondAttribute="trailing" id="25b-fx-saD"/>
+                                                <constraint firstItem="nEr-tr-EQc" firstAttribute="leading" secondItem="pHG-AA-m7e" secondAttribute="leading" constant="8" id="CaK-vj-rEi" userLabel="Date Label.leading = Cell Image.leading + 8"/>
+                                                <constraint firstItem="0kB-9w-JfI" firstAttribute="top" secondItem="pHG-AA-m7e" secondAttribute="top" id="FBn-ib-Rby"/>
+                                                <constraint firstAttribute="trailing" secondItem="pHG-AA-m7e" secondAttribute="trailing" constant="16" id="H5A-BF-phR"/>
+                                                <constraint firstItem="nEr-tr-EQc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pHG-AA-m7e" secondAttribute="trailing" constant="8" id="KVo-94-zZS"/>
+                                                <constraint firstItem="pHG-AA-m7e" firstAttribute="leading" secondItem="Itc-8c-qxS" secondAttribute="leading" constant="16" id="a9J-sD-EWw"/>
+                                                <constraint firstItem="nEr-tr-EQc" firstAttribute="bottom" secondItem="pHG-AA-m7e" secondAttribute="bottom" constant="8" id="baL-JQ-ucI"/>
+                                                <constraint firstItem="pHG-AA-m7e" firstAttribute="top" secondItem="Itc-8c-qxS" secondAttribute="top" constant="4" id="g5z-6l-3se"/>
+                                                <constraint firstAttribute="bottom" secondItem="pHG-AA-m7e" secondAttribute="bottom" constant="4" id="mbG-dp-aDY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="YP Black"/>
@@ -77,10 +80,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstItem="EaW-em-CKa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7cQ-b1-NA3"/>
-                            <constraint firstItem="EaW-em-CKa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Th0-oi-QvK"/>
-                            <constraint firstAttribute="trailing" secondItem="EaW-em-CKa" secondAttribute="trailing" id="ibp-Pg-M1S"/>
-                            <constraint firstAttribute="bottom" secondItem="EaW-em-CKa" secondAttribute="bottom" id="lnX-BL-0xv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EaW-em-CKa" secondAttribute="trailing" id="DiJ-rW-2c9"/>
+                            <constraint firstItem="EaW-em-CKa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dwf-eA-WIi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="EaW-em-CKa" secondAttribute="top" id="P8L-M0-coV"/>
+                            <constraint firstItem="EaW-em-CKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jgI-6H-8eh"/>
                         </constraints>
                     </view>
                     <connections>
@@ -89,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-2"/>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
