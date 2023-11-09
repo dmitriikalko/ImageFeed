@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BuK-iN-Jpm">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -119,15 +119,6 @@
                                     <constraint firstAttribute="width" constant="70" id="nha-8m-5fz"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdO-Mi-Ecu" userLabel="Exit Button">
-                                <rect key="frame" x="315" y="148" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="790-78-7wA"/>
-                                    <constraint firstAttribute="height" constant="44" id="f7P-Zf-KB9"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Exit"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3BK-yM-7z8">
                                 <rect key="frame" x="15.999999999999986" y="207" width="233.66666666666663" height="27.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
@@ -146,6 +137,19 @@
                                 <color key="textColor" name="YP White"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-pp-DTx">
+                                <rect key="frame" x="333" y="148" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="HnR-jO-Kvm"/>
+                                    <constraint firstAttribute="height" constant="44" id="lCd-o2-eKh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="" image="Exit"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Exit" title="">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="1"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HrD-qC-OZW"/>
                         <color key="backgroundColor" name="YP Black"/>
@@ -153,19 +157,19 @@
                             <constraint firstItem="7ch-Hl-6HQ" firstAttribute="leading" secondItem="HrD-qC-OZW" secondAttribute="leading" constant="16" id="5ca-Qi-VRj"/>
                             <constraint firstItem="9Qv-Ph-O3S" firstAttribute="leading" secondItem="HrD-qC-OZW" secondAttribute="leading" constant="16" id="9w0-YP-N9F"/>
                             <constraint firstItem="9Qv-Ph-O3S" firstAttribute="top" secondItem="gRy-Ag-RWi" secondAttribute="bottom" constant="8" id="EJO-wL-tXn"/>
+                            <constraint firstItem="HrD-qC-OZW" firstAttribute="trailing" secondItem="xdi-pp-DTx" secondAttribute="trailing" constant="16" id="H6K-nx-OfE"/>
                             <constraint firstItem="7ch-Hl-6HQ" firstAttribute="top" secondItem="HrD-qC-OZW" secondAttribute="top" constant="70" id="Ltw-a8-Ohh"/>
                             <constraint firstItem="3BK-yM-7z8" firstAttribute="top" secondItem="7ch-Hl-6HQ" secondAttribute="bottom" constant="8" id="Rfa-7t-Yma"/>
                             <constraint firstItem="3BK-yM-7z8" firstAttribute="leading" secondItem="HrD-qC-OZW" secondAttribute="leading" constant="16" id="b6C-YZ-OPJ"/>
+                            <constraint firstItem="xdi-pp-DTx" firstAttribute="top" secondItem="HrD-qC-OZW" secondAttribute="top" constant="89" id="bAh-2W-yqa"/>
                             <constraint firstItem="gRy-Ag-RWi" firstAttribute="top" secondItem="3BK-yM-7z8" secondAttribute="bottom" constant="8" id="f6q-Qa-I8e"/>
                             <constraint firstItem="gRy-Ag-RWi" firstAttribute="leading" secondItem="HrD-qC-OZW" secondAttribute="leading" constant="16" id="gsi-rB-5Uw"/>
-                            <constraint firstItem="WdO-Mi-Ecu" firstAttribute="leading" secondItem="HrD-qC-OZW" secondAttribute="leading" constant="315" id="szi-ud-ZQz"/>
-                            <constraint firstItem="WdO-Mi-Ecu" firstAttribute="top" secondItem="HrD-qC-OZW" secondAttribute="top" constant="89" id="zud-dY-Rgu"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLI-Jt-B6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="-679"/>
+            <point key="canvasLocation" x="-193.12977099236642" y="-679.57746478873241"/>
         </scene>
     </scenes>
     <resources>
