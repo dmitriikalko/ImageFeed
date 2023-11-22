@@ -18,6 +18,7 @@
 		EF51DF9D2ACEECDB0025710B /* ImageFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51DF9C2ACEECDB0025710B /* ImageFeedUITestsLaunchTests.swift */; };
 		EFB3DF702AFD37BF00893D12 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB3DF6F2AFD37BF00893D12 /* ProfileViewController.swift */; };
 		EFE20E932AD000A7002C1DE6 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE20E922AD000A7002C1DE6 /* ImagesListCell.swift */; };
+		EFE7FA512B0DE87E002248C3 /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7FA502B0DE87E002248C3 /* SingleImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		EF51DF9C2ACEECDB0025710B /* ImageFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EFB3DF6F2AFD37BF00893D12 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EFE20E922AD000A7002C1DE6 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		EFE7FA502B0DE87E002248C3 /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			children = (
 				EFE20E922AD000A7002C1DE6 /* ImagesListCell.swift */,
 				EF51DF7D2ACEECDA0025710B /* ImagesListViewController.swift */,
+				EFE7FA502B0DE87E002248C3 /* SingleImageViewController.swift */,
 			);
 			path = ImagesList;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				EFE20E932AD000A7002C1DE6 /* ImagesListCell.swift in Sources */,
 				EFB3DF702AFD37BF00893D12 /* ProfileViewController.swift in Sources */,
 				EF51DF7A2ACEECDA0025710B /* AppDelegate.swift in Sources */,
+				EFE7FA512B0DE87E002248C3 /* SingleImageViewController.swift in Sources */,
 				EF51DF7C2ACEECDA0025710B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
