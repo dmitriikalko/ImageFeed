@@ -44,6 +44,8 @@ class ImagesListViewController: UIViewController {
     //func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {}
 
     // seguay
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == ShowSingleImageSegueIdentifier { // 1
                 let viewController = segue.destination as! SingleImageViewController // 2
@@ -58,6 +60,7 @@ class ImagesListViewController: UIViewController {
                 super.prepare(for: segue, sender: sender) // 6
             }
         }
+     
 }
 
 // MARK: -Extensions
