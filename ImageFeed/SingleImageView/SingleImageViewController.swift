@@ -10,13 +10,13 @@ import UIKit
 
 final class SingleImageViewController: UIViewController {
     
-    /*var image: UIImage! {
+    var image: UIImage! {
         didSet {
             guard isViewLoaded else { return }
             imageView.image = image
         }
     }
-    */
+    
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -27,11 +27,11 @@ final class SingleImageViewController: UIViewController {
         
     }
     
-    /*
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = image
     }
-     */
+     
 }
 
