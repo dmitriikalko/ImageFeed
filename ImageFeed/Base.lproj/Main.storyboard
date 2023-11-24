@@ -108,8 +108,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQj-FJ-8Ua">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="TJR-0J-JM6">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="132"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="414" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="TJR-0J-JM6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -120,6 +120,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="AAg-61-gjN"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="qm1-9f-Fsi"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zmz-RC-LCB" id="Rir-0I-Kkk"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86Q-ZS-Rlp" userLabel="Backward Button">
                                 <rect key="frame" x="8" y="8" width="48" height="48"/>
@@ -133,10 +136,23 @@
                                     <action selector="didTapBackButton:" destination="zmz-RC-LCB" eventType="touchUpInside" id="LeE-3R-aOv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-8e-zmn" userLabel="Share Button">
+                                <rect key="frame" x="169" y="766" width="55" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="4ma-Jt-6Je"/>
+                                    <constraint firstAttribute="height" constant="50" id="BAX-AW-3Al"/>
+                                </constraints>
+                                <state key="normal" title=" " image="Sharing"/>
+                                <connections>
+                                    <action selector="didShareButton:" destination="zmz-RC-LCB" eventType="touchUpInside" id="s7T-e8-Q7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8lz-O9-CMv"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
+                            <constraint firstItem="8lz-O9-CMv" firstAttribute="bottom" secondItem="Pdr-8e-zmn" secondAttribute="bottom" constant="36" id="3tj-i1-A7h"/>
+                            <constraint firstItem="Pdr-8e-zmn" firstAttribute="centerX" secondItem="oTB-AE-vXq" secondAttribute="centerX" id="7DV-k7-ZXw"/>
                             <constraint firstAttribute="bottom" secondItem="dQj-FJ-8Ua" secondAttribute="bottom" id="915-2Q-myk"/>
                             <constraint firstItem="dQj-FJ-8Ua" firstAttribute="top" secondItem="oTB-AE-vXq" secondAttribute="top" id="CR3-yJ-XaV"/>
                             <constraint firstItem="86Q-ZS-Rlp" firstAttribute="top" secondItem="8lz-O9-CMv" secondAttribute="top" constant="8" id="OVj-sD-5w0"/>
@@ -260,6 +276,7 @@
         <image name="Exit" width="44" height="44"/>
         <image name="No Active Like" width="44" height="44"/>
         <image name="PhotoUser" width="70" height="70"/>
+        <image name="Sharing" width="50" height="50"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YP Black">
