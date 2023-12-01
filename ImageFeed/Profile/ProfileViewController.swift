@@ -12,12 +12,12 @@ final class ProfileViewController: UIViewController {
     
    
     
-    
+    //MARK: -Overrides Methods
     override func viewDidLoad() {
         makeProfileView()
     }
     
-    
+    //MARK: -Private Methods
     private func makeProfileView() {
         
         //добавляем картинку профиля
