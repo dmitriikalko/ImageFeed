@@ -29,7 +29,7 @@ final class ProfileViewController: UIViewController {
         view.addSubview(imageView)
         imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 76).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 76).isActive = true
         imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
         
         //добавляем кнопку выхода из профиля
@@ -38,7 +38,7 @@ final class ProfileViewController: UIViewController {
             target: self,
             action: #selector(Self.didTapExitButton)
         )
-        exitProfileButton.tintColor = .red
+        exitProfileButton.tintColor = UIColor(named: "YP Red")
         
         exitProfileButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -60,7 +60,7 @@ final class ProfileViewController: UIViewController {
         nameLabel.textColor = .white
         nameLabel.font = UIFont.systemFont(ofSize: 23, weight: .bold)
         
-        nickNameLabel.textColor = .gray
+        nickNameLabel.textColor = UIColor(named: "YP Gray")
         nickNameLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         
         descriptionLabel.textColor = .white
