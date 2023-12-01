@@ -10,78 +10,100 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
-   
+    //MARK: -Private Properies
     
-    //MARK: -Overrides Methods
-    override func viewDidLoad() {
-        makeProfileView()
-    }
+    //картинка профиля
+    private let userImage = UIImage(named: "PhotoUser")
+    private let defaultProfileImage = UIImage(systemName: "person.crop.circle.fill")
     
-    //MARK: -Private Methods
-    private func makeProfileView() {
-        
-        //добавляем картинку профиля
-        let profileImage = UIImage(named: "PhotoUser")
-        let imageView = UIImageView(image: profileImage)
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(imageView)
-        imageView.heightAnchor.constraint(equalToConstant: 70).isActive = true
-        imageView.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        imageView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 76).isActive = true
-        imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
-        
-        //добавляем кнопку выхода из профиля
-        let exitProfileButton = UIButton.systemButton(
+    //imageView
+    private lazy var profileImage: UIImageView = {
+        let imageView = UIImageView(image: userImage)
+
+       imageView.translatesAutoresizingMaskIntoConstraints = false
+       
+       return imageView
+    }()
+    
+    //button
+    private lazy var exitProfileButton: UIButton =  {
+        let button = UIButton.systemButton(
             with: UIImage(named: "Exit")!,
             target: self,
             action: #selector(Self.didTapExitButton)
         )
-        exitProfileButton.tintColor = UIColor(named: "YP Red")
-        
-        exitProfileButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        button.tintColor = UIColor(named: "YP Red")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    //label1
+    private lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Екатерина Новикова"
+        label.textColor = UIColor(named: "YP White")
+        label.font = UIFont.systemFont(ofSize: 23, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    //label2
+    private lazy var nickNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "@ekaterina_nov"
+        label.textColor = UIColor(named: "YP Gray")
+        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    //label3
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Hello, World!"
+        label.textColor = UIColor(named: "YP White")
+        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    //MARK: -Overrides Methods
+    override func viewDidLoad() {
+        addSubViews()
+        applyConstrfints()
+    }
+
+    
+    //MARK: -Private Methods
+    private func addSubViews() {
+        view.addSubview(profileImage)
         view.addSubview(exitProfileButton)
-        exitProfileButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        exitProfileButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        exitProfileButton.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        exitProfileButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
-        
-        //добавляем текстовые поля
-        let nameLabel = UILabel()
-        let nickNameLabel = UILabel()
-        let descriptionLabel = UILabel()
-        
-        nameLabel.text = "Екатерина Новикова"
-        nickNameLabel.text = "@ekaterina_nov"
-        descriptionLabel.text = "Hello World!"
-        
-        nameLabel.textColor = .white
-        nameLabel.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        
-        nickNameLabel.textColor = UIColor(named: "YP Gray")
-        nickNameLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        
-        descriptionLabel.textColor = .white
-        descriptionLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nickNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        
         view.addSubview(nameLabel)
         view.addSubview(nickNameLabel)
         view.addSubview(descriptionLabel)
-        
-        nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        
-        nickNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
-        nickNameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
-        
-        descriptionLabel.topAnchor.constraint(equalTo: nickNameLabel.bottomAnchor, constant: 8).isActive = true
-        descriptionLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
+    }
+    
+    private func applyConstrfints() {
+        NSLayoutConstraint.activate([
+            profileImage.heightAnchor.constraint(equalToConstant: 70),
+            profileImage.widthAnchor.constraint(equalToConstant: 70),
+            profileImage.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 76),
+            profileImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            
+            exitProfileButton.heightAnchor.constraint(equalToConstant: 44),
+            exitProfileButton.widthAnchor.constraint(equalToConstant: 44),
+            exitProfileButton.centerYAnchor.constraint(equalTo: profileImage.centerYAnchor),
+            exitProfileButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+            
+            nameLabel.topAnchor.constraint(equalTo: profileImage.bottomAnchor, constant: 8),
+            nameLabel.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor),
+            
+            nickNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            nickNameLabel.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor),
+            
+            descriptionLabel.topAnchor.constraint(equalTo: nickNameLabel.bottomAnchor, constant: 8),
+            descriptionLabel.leadingAnchor.constraint(equalTo: profileImage.leadingAnchor)
+        ])
     }
     
     @objc
