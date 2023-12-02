@@ -261,16 +261,50 @@
             </objects>
             <point key="canvasLocation" x="2198" y="-380"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Web View View Controller-->
         <scene sceneID="zi4-dK-4EW">
             <objects>
-                <viewController id="Viu-bY-CDB" customClass="WebViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Viu-bY-CDB" customClass="WebViewViewController" customModule="ImageFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciD-nu-Gp9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gt-VD-4p9">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" name="YP White"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQS-pK-DYE" userLabel="Back Button">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                <color key="backgroundColor" name="YP White"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hUA-Za-TLI"/>
+                                    <constraint firstAttribute="width" constant="64" id="oqu-R2-9jA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Exit Button" image="Backward_Black"/>
+                                <connections>
+                                    <action selector="didTapBackButton:" destination="Viu-bY-CDB" eventType="touchUpInside" id="4QZ-u2-Piw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dD8-Cc-wop"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7gt-VD-4p9" firstAttribute="top" secondItem="ciD-nu-Gp9" secondAttribute="top" id="3j9-bL-whO"/>
+                            <constraint firstItem="QQS-pK-DYE" firstAttribute="top" secondItem="dD8-Cc-wop" secondAttribute="top" id="C2G-Qw-f14"/>
+                            <constraint firstItem="7gt-VD-4p9" firstAttribute="trailing" secondItem="ciD-nu-Gp9" secondAttribute="trailing" id="DLP-n2-vtA"/>
+                            <constraint firstItem="7gt-VD-4p9" firstAttribute="bottom" secondItem="ciD-nu-Gp9" secondAttribute="bottom" id="XOK-DI-y8t"/>
+                            <constraint firstItem="7gt-VD-4p9" firstAttribute="leading" secondItem="ciD-nu-Gp9" secondAttribute="leading" id="coe-JE-OWn"/>
+                            <constraint firstItem="QQS-pK-DYE" firstAttribute="leading" secondItem="dD8-Cc-wop" secondAttribute="leading" id="lYa-o3-A75"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="7gt-VD-4p9" id="Fee-H6-J6T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ng-aW-MS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,6 +332,7 @@
     <resources>
         <image name="0" width="200" height="132"/>
         <image name="Backward" width="24" height="24"/>
+        <image name="Backward_Black" width="24" height="24"/>
         <image name="Logo_of_Unsplash" width="60" height="60"/>
         <image name="No Active Like" width="44" height="44"/>
         <image name="Sharing" width="50" height="50"/>
