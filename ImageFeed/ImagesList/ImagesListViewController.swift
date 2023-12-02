@@ -8,14 +8,14 @@
 import UIKit
 
 class ImagesListViewController: UIViewController {
-
-    // MARK: - Public properties
     
     // MARK: - IBOutlet
     @IBOutlet private var tableView: UITableView!
     
+    // MARK: - Public properties
     
     // MARK: - Private properties
+    private let ShowSingleImageSegueIdentifier = "ShowSingleImage"
     //моковые картинки
     //создаем масссив чисел и возвращаем массив строк
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
@@ -28,26 +28,33 @@ class ImagesListViewController: UIViewController {
         return formatter
     }()
     
-    // MARK: - viewDidLoad
-    
+    // MARK: -Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
     }
     
-
-
-    //func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {}
-
+    // seguay
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == ShowSingleImageSegueIdentifier { // 1
+            let viewController = segue.destination as! SingleImageViewController // 2
+            let indexPath = sender as! IndexPath // 3
+            let image = UIImage(named: photosName[indexPath.row]) // 4
+            viewController.image = image // 5
+        } else {
+            super.prepare(for: segue, sender: sender) // 6
+        }
+    }
 }
 
-// MARK: -Extensions
-
+// MARK: -Ex UITableViewDelegate
 extension ImagesListViewController: UITableViewDelegate {
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        performSegue(withIdentifier: ShowSingleImageSegueIdentifier, sender: indexPath)
         
     }
     //динамическая высота
@@ -67,6 +74,7 @@ extension ImagesListViewController: UITableViewDelegate {
     
 }
 
+//MARK: -Ex UITableViewDataSource
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photosName.count
@@ -93,6 +101,7 @@ extension ImagesListViewController: UITableViewDataSource {
     }
 }
 
+//MARK: -EX ImaeListViewController
 extension ImagesListViewController {
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
