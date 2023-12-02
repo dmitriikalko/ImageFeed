@@ -70,7 +70,7 @@ final class ProfileViewController: UIViewController {
     //MARK: -Overrides Methods
     override func viewDidLoad() {
         addSubViews()
-        applyConstrfints()
+        applyConstraints()
     }
 
     
@@ -83,11 +83,11 @@ final class ProfileViewController: UIViewController {
         view.addSubview(descriptionLabel)
     }
     
-    private func applyConstrfints() {
+    private func applyConstraints() {
         NSLayoutConstraint.activate([
             profileImage.heightAnchor.constraint(equalToConstant: 70),
             profileImage.widthAnchor.constraint(equalToConstant: 70),
-            profileImage.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 76),
+            profileImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 76),
             profileImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             
             exitProfileButton.heightAnchor.constraint(equalToConstant: 44),
