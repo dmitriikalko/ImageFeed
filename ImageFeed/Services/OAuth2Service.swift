@@ -8,22 +8,14 @@
 import Foundation
 
 final class OAuth2Service {
-    func fetchOAuthToken(_ code: String, completion: @escaping (Result<String, Error>) -> Void) {
+    func fetchOAuthToken(code: String, completion: @escaping (Result<String, Error>) -> Void) {
         
-        var urlComponents = URLComponents(string: "https://unsplash.com/oauth/token")
-        urlComponents?.queryItems = [
-            URLQueryItem(name: "client_id", value: AccessKey),
-            URLQueryItem(name: "client_secret", value: SecretKey),
-            URLQueryItem(name: "redirect_uri", value: RedirectURI),
-            URLQueryItem(name: "code", value: code),
-            URLQueryItem(name: "grand_type", value: "authorization_code")
-        ]
-        
-        if let url = urlComponents?.url{
+        if let url = fetchUrl("https://unsplash.com/oauth/token", code: code) {
+            
             var request  = URLRequest(url: url)
             request.httpMethod = "POST"
             
-            let task = URLSession.shared.dataTask(with: request,completionHandler: { data, response, error in
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 
                 
                 if let error = error {
@@ -61,10 +53,24 @@ final class OAuth2Service {
                         completion(.failure(NetworkError.httpStatusCode(httpResponse.statusCode)))
                     }
                 }
-            })
+            }
             task.resume()
             
         }
+    }
+    
+    private func fetchUrl(_ url: String, code: String) -> URL? {
+        guard var urlComponents = URLComponents(string: url) else { return nil }
+        
+        urlComponents.queryItems = [
+            URLQueryItem(name: "client_id", value: AccessKey),
+            URLQueryItem(name: "client_secret", value: SecretKey),
+            URLQueryItem(name: "redirect_uri", value: RedirectURI),
+            URLQueryItem(name: "code", value: code),
+            URLQueryItem(name: "grant_type", value: "authorization_code")
+        ]
+        
+        return urlComponents.url
     }
 }
 

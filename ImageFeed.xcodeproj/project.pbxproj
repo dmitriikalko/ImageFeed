@@ -10,6 +10,7 @@
 		EF38220A2B1B5B5300BE6E8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3822092B1B5B5300BE6E8D /* Constants.swift */; };
 		EF38220D2B1B751C00BE6E8D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38220C2B1B751C00BE6E8D /* AuthViewController.swift */; };
 		EF38220F2B1B76F200BE6E8D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38220E2B1B76F200BE6E8D /* WebViewController.swift */; };
+		EF4634172B43147400B50FDE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4634162B43147400B50FDE /* SplashViewController.swift */; };
 		EF51DF7A2ACEECDA0025710B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51DF792ACEECDA0025710B /* AppDelegate.swift */; };
 		EF51DF7C2ACEECDA0025710B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51DF7B2ACEECDA0025710B /* SceneDelegate.swift */; };
 		EF51DF7E2ACEECDA0025710B /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51DF7D2ACEECDA0025710B /* ImagesListViewController.swift */; };
@@ -47,6 +48,7 @@
 		EF3822092B1B5B5300BE6E8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF38220C2B1B751C00BE6E8D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		EF38220E2B1B76F200BE6E8D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EF4634162B43147400B50FDE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		EF51DF762ACEECDA0025710B /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF51DF792ACEECDA0025710B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF51DF7B2ACEECDA0025710B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		EF4634152B43144D00B50FDE /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EF4634162B43147400B50FDE /* SplashViewController.swift */,
+			);
+			path = SplashViewController;
+			sourceTree = "<group>";
+		};
 		EF51DF6D2ACEECDA0025710B = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 		EF51DF782ACEECDA0025710B /* ImageFeed */ = {
 			isa = PBXGroup;
 			children = (
+				EF4634152B43144D00B50FDE /* SplashViewController */,
 				EFE134A02B31F2E500596DAD /* Services */,
 				EF38220B2B1B74F600BE6E8D /* Auth */,
 				EF3822082B1B5B3200BE6E8D /* Constants */,
@@ -333,6 +344,7 @@
 				EF51DF7E2ACEECDA0025710B /* ImagesListViewController.swift in Sources */,
 				EF38220F2B1B76F200BE6E8D /* WebViewController.swift in Sources */,
 				EFE20E932AD000A7002C1DE6 /* ImagesListCell.swift in Sources */,
+				EF4634172B43147400B50FDE /* SplashViewController.swift in Sources */,
 				EFB3DF702AFD37BF00893D12 /* ProfileViewController.swift in Sources */,
 				EFE134A42B31F33B00596DAD /* OAuth2TokenStorage.swift in Sources */,
 				EF51DF7A2ACEECDA0025710B /* AppDelegate.swift in Sources */,
