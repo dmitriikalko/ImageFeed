@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+//ptotocol AuthViewControllerDelegate: AnyObject {
+//    func authViewController(_ vc: AuthViewController, didAutenticateWithCode code: String)
+//}
+
+
 final class AuthViewController: UIViewController {
     private let ShowWebViewSegueIdentifier = "ShowWebView"
     
@@ -25,6 +30,7 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
         //TODO: process code
+        //delegate?authViewController(self, didAuthenticateWuthCode)
     }
 
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
