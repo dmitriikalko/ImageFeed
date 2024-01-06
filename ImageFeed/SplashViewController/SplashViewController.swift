@@ -12,7 +12,7 @@ final class SplashViewController: UIViewController {
     //MARK: -private properties
     private let oath2Service = OAuth2Service()
     private let oauth2TokenStorage = OAuth2TokenStorage()
-    private let ShowAuthentificationScreenSegueIdentifer = "ShowAutentificationScreen"
+    private let showAuthentificationScreenSegueIdentifer = "ShowAutentificationScreen"
     
     //MARK: -ovverride methods
     override func viewDidAppear(_ animated: Bool) {
@@ -23,7 +23,7 @@ final class SplashViewController: UIViewController {
             switchToTabBarController()
         } else {
             //flow authorization
-            performSegue(withIdentifier: ShowAuthentificationScreenSegueIdentifer , sender: nil)
+            performSegue(withIdentifier: showAuthentificationScreenSegueIdentifer , sender: nil)
         }
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -49,11 +49,11 @@ final class SplashViewController: UIViewController {
 //MARK: -Extensions
 extension SplashViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == ShowAuthentificationScreenSegueIdentifer {
+        if segue.identifier == showAuthentificationScreenSegueIdentifer {
             guard
                 let navigationController = segue.destination as? UINavigationController,
                 let viewController = navigationController.viewControllers[0] as? AuthViewController
-            else {fatalError("Failed to prepare for \(ShowAuthentificationScreenSegueIdentifer)")}
+            else {fatalError("Failed to prepare for \(showAuthentificationScreenSegueIdentifer)")}
             viewController.delegate = self
                              } else {
                 super.prepare(for: segue, sender: sender)
@@ -76,8 +76,6 @@ extension SplashViewController: AuthViewControllerDelegate {
                 self.oauth2TokenStorage.token = accessToken
                 self.switchToTabBarController()
             case .failure(let error):
-                print("ошибка")
-                print(error)
                 break
             }
         }
