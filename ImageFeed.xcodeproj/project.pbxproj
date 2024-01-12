@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EF2B79632B51B63900CF779D /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = EF2B79622B51B63900CF779D /* ProgressHUD */; };
+		EF2B79652B51C65400CF779D /* UIBlockingProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B79642B51C65400CF779D /* UIBlockingProgressHUD.swift */; };
 		EF38220A2B1B5B5300BE6E8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3822092B1B5B5300BE6E8D /* Constants.swift */; };
 		EF38220D2B1B751C00BE6E8D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38220C2B1B751C00BE6E8D /* AuthViewController.swift */; };
 		EF38220F2B1B76F200BE6E8D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38220E2B1B76F200BE6E8D /* WebViewController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF2B79642B51C65400CF779D /* UIBlockingProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBlockingProgressHUD.swift; sourceTree = "<group>"; };
 		EF3822092B1B5B5300BE6E8D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF38220C2B1B751C00BE6E8D /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		EF38220E2B1B76F200BE6E8D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				EFE134A12B31F31800596DAD /* OAuth2Service.swift */,
 				EFE134A32B31F33B00596DAD /* OAuth2TokenStorage.swift */,
+				EF2B79642B51C65400CF779D /* UIBlockingProgressHUD.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				EFB3DF702AFD37BF00893D12 /* ProfileViewController.swift in Sources */,
 				EFE134A42B31F33B00596DAD /* OAuth2TokenStorage.swift in Sources */,
 				EFD02AFF2B48FEDB0098D7CD /* Network Errors.swift in Sources */,
+				EF2B79652B51C65400CF779D /* UIBlockingProgressHUD.swift in Sources */,
 				EF51DF7A2ACEECDA0025710B /* AppDelegate.swift in Sources */,
 				EF38220D2B1B751C00BE6E8D /* AuthViewController.swift in Sources */,
 				EF38220A2B1B5B5300BE6E8D /* Constants.swift in Sources */,
