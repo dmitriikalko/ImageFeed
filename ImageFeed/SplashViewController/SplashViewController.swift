@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ProgressHUD
 
 final class SplashViewController: UIViewController {
     //MARK: -private properties
@@ -63,19 +64,22 @@ extension SplashViewController {
 
 extension SplashViewController: AuthViewControllerDelegate {
     func authViewController(_ vc: AuthViewController, didAutenticateWithCode code: String) {
+        ProgressHUD.show()
         dismiss(animated: true) { [ weak self] in
             guard let self = self else { return }
             self.fetchOAuthToken(code)
         }
     }
     private func fetchOAuthToken(_ code: String) {
-        oath2Service.fetchOAuthToken(code: code) { [ weak self] result in
+        oath2Service.fetchOAuthToken(code) { [ weak self] result in
             guard let self = self else {return}
             switch result {
             case .success(let accessToken):
                 self.oauth2TokenStorage.token = accessToken
                 self.switchToTabBarController()
+                ProgressHUD.dismiss()
             case .failure(let error):
+                ProgressHUD.dismiss()
                 break
             }
         }
